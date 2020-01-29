@@ -1,0 +1,9 @@
+
+/package-lock.json
+/dist/
+/node_modules/
+/.idea/
+.DS_Store
+/htdocs/bitrix/
+/htdocs/upload/
+/htdocs/vendor/

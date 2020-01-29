@@ -1,0 +1,21 @@
+mixin map-info (data, className)
+	.map-info(class=className)
+		if data.item
+			.map-info__items
+				each el in data.item
+					.map-info__item
+						.map-info__title!=el.title
+						a.map-info__text!=el.text
+							svg.map-info__icon
+								use(xlink:href=loadAssets(`${el.svg}`))
+		if data.social
+			.map-info__social
+				.map-info__social-title=data.social.title
+				if data.social.icon
+					.map-info__social-wpn
+						each elem in data.social.icon
+							a.map-info__social-link(href=elem.href)
+								svg.map-info__social-icon
+									use(xlink:href=loadAssets(`${elem.svg}`))
+
+

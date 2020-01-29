@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "items": [
+    {
+      "src": "./assets/images/design/project_1.jpg",
+      "alt": "gallery"
+    },
+    {
+      "src": "./assets/images/popup-gallery/popup-gallery_1.jpg",
+      "alt": "gallery"
+    },
+    {
+      "src": "./assets/images/popup-gallery/popup-gallery_1.jpg",
+      "alt": "gallery"
+    },
+    {
+      "src": "./assets/images/popup-gallery/popup-gallery_0.jpg",
+      "alt": "gallery"
+    }
+  ]
+}

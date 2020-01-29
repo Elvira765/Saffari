@@ -1,0 +1,19 @@
+$parent: text-little;
+
+@include block($parent) {
+  font-size: rem(14);
+  line-height: 1.7;
+  color: $black;
+
+  @media screen and (min-width: $tMin) {
+    font-size: rem(18);
+    line-height: 1.5;
+  }
+
+  @include modifier($parent, 'm') {
+    @media screen and (min-width: $tMin) {
+      font-size: rem(14);
+      line-height: rem(22);
+    }
+  }
+}

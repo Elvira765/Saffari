@@ -1,0 +1,15 @@
+include ../service-item/service-item.pug
+include ../core/title/title.pug
+include ../main/main.pug
+include ../arrow/arrow.pug
+mixin service(data)
+	.service
+		+main
+			+title(data.title)
+			.service__top
+				.service__text!= data.text
+				.service__topnav
+					each item in data.topnav
+						a.service__topnav-item(class=(item.active ? 'service__topnav-item--active' : '') href=item.url)!=item.name
+					+arrow(data.arrow,'service__arrow')
+			+service-item(data.tab,'.service__tab')

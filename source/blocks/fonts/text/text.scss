@@ -1,0 +1,9 @@
+$parent: text;
+	
+@include block($parent) {
+
+	font-size: 16px;
+	line-height: 24px;
+	font-family: $Roboto;
+	
+}

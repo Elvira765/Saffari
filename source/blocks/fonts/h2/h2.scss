@@ -1,0 +1,27 @@
+$parent: h2;
+
+@include block($parent) {
+  font-size: rem(25);
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: $black;
+
+  @media screen and (min-width: $dMin) {
+    font-size: rem(30);
+    line-height: 1.4;
+  }
+
+  @include modifier($parent, 'inh') {
+    text-transform: inherit;
+  }
+
+  @include modifier($parent, 'm') {
+    line-height: 1.35;
+    text-transform: inherit;
+
+    @media screen and (min-width: $tMin) {
+      font-size: rem(25);
+      line-height: 1.35;
+    }
+  }
+}

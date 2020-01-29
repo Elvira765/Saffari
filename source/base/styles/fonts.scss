@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'BaronNeue';
+  src:
+    url('./assets/fonts/BaronNeue.woff') format('woff'),
+    url('./assets/fonts/BaronNeue.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'BaronNeue';
+  src:
+    url('./assets/fonts/BaronNeueBold.woff') format('woff'),
+    url('./assets/fonts/BaronNeueBold.ttf') format('truetype');
+  font-style: Bold;
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Lato';
+  src:
+    url('./assets/fonts/Lato-Regular.woff') format('woff'),
+    url('./assets/fonts/Lato-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src:
+    url('./assets/fonts/Lato-Bold.woff') format('woff'),
+    url('./assets/fonts/Lato-Bold.ttf') format('truetype');
+  font-style: Bold;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src:
+    url('./assets/fonts/Roboto-Regular.woff') format('woff'),
+    url('./assets/fonts/Roboto-Regular.woff') format('woff2'),
+    url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Roboto';
+  src:
+    url('./assets/fonts/Roboto-Italic.woff') format('woff'),
+    url('./assets/fonts/Roboto-Italic.woff') format('woff2'),
+    url('./assets/fonts/Roboto-Italic.ttf') format('truetype');
+  font-style: Italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Roboto';
+  src:
+    url('./assets/fonts/Roboto-Medium.woff') format('woff'),
+    url('./assets/fonts/Roboto-Medium.woff') format('woff2'),
+    url('./assets/fonts/Roboto-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src:
+    url('./assets/fonts/Roboto-Bold.woff') format('woff'),
+    url('./assets/fonts/Roboto-Bold.woff') format('woff2'),
+    url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
+  font-style: Bold;
+  font-weight: 600;
+}

@@ -1,0 +1,107 @@
+{
+  "success": true,
+  "items": [
+    {
+      "images": {
+        "imgM": "./assets/images/houses/house_0.jpg",
+        "imgT": "./assets/images/houses/house_0.jpg",
+        "img": "./assets/images/houses/house_0.jpg",
+        "alt": "house"
+      },
+      "zoom_btn": {
+        "url": "/ajax/json/popup-gallery.json",
+        "icon": "./assets/sprite.svg#search-usage"
+      },
+      "label": {
+        "text": "Популярное",
+        "className": "label--popular"
+      },
+      "top": {
+        "name": "Верден",
+        "info_items": [
+          "3 санузла",
+          "4 спальни"
+        ],
+        "area": "204 м²"
+      },
+      "bottom": {
+        "rows": [
+          {
+            "info": {
+              "title": "Каркас",
+              "text": "по канадской технологии"
+            },
+            "price": {
+              "title": "цена от",
+              "text": "5 186 500 ₽"
+            }
+          },
+          {
+            "info": {
+              "title": "Блоки"
+            },
+            "price": {
+              "title": "цена от",
+              "text": "8 880 300 ₽"
+            }
+          }
+        ],
+        "btn": {
+          "text": "подробнее",
+          "url": "/project.html"
+        }
+      }
+    },
+    {
+      "images": {
+        "imgM": "./assets/images/houses/house_1.jpg",
+        "imgT": "./assets/images/houses/house_1.jpg",
+        "img": "./assets/images/houses/house_1.jpg",
+        "alt": "house"
+      },
+      "zoom_btn": {
+        "url": "/ajax/json/popup-gallery.json",
+        "icon": "./assets/sprite.svg#search-usage"
+      },
+      "label": {
+        "text": "Строится",
+        "className": "label--build"
+      },
+      "top": {
+        "name": "Вальдорф",
+        "info_items": [
+          "3 санузла",
+          "5 спальни"
+        ],
+        "area": "265 м²"
+      },
+      "bottom": {
+        "rows": [
+          {
+            "info": {
+              "title": "Каркас",
+              "text": "по канадской технологии"
+            },
+            "price": {
+              "title": "цена от",
+              "text": "5 186 500 ₽"
+            }
+          },
+          {
+            "info": {
+              "title": "Блоки"
+            },
+            "price": {
+              "title": "цена от",
+              "text": "8 880 300 ₽"
+            }
+          }
+        ],
+        "btn": {
+          "text": "подробнее",
+          "url": "/project.html"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+stages:
+- deploy
+
+deploy:
+    stage: deploy
+    only:
+    - master
+    script:
+    - export PATH=$PATH:/home/gitlab-runner/.nvm/versions/node/v9.11.1/bin
+    - npm install
+    - npm run build
+    - cp -r dist/* /var/www/$CI_PROJECT_NAME/htdocs/
+    cache:
+        paths:
+        - node_modules/

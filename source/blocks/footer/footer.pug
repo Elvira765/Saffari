@@ -1,0 +1,39 @@
+include ./../fonts/text/little/text-little.pug
+include ./../fonts/text/base/text-base.pug
+include ./../fonts/text/text.pug
+
+mixin footer(obj)
+  .footer
+    .footer__content.main
+      if obj.top
+        .footer__top
+          ul.footer__links
+            each item in obj.top.links
+              li.footer__links-col
+                a.footer__links-item.h6(href=item.url)= item.text
+          if obj.top.contacts
+            .footer__contacts
+              .footer__contacts-item
+                if obj.top.contacts.time
+                  +text-little(obj.top.contacts.time)
+              .footer__contacts-item
+                if obj.top.contacts.address
+                  +text-little(obj.top.contacts.address, 'footer__contacts-item-address')
+                if obj.top.contacts.metro
+                  +text-little(obj.top.contacts.metro)
+      if obj.bottom
+        .footer__bottom
+          each item in obj.bottom
+            .footer__bottom-row
+              if item.copy
+                +text-base(item.copy, 'footer__bottom-text')
+              if item.socials
+                .footer__socials
+                  each el in item.socials
+                    a.footer__socials-item(href=el.url, target='_blank')
+                      svg
+                        use(xlink:href=loadAssets('./svg/' + el.icon + '.svg'))
+              if item.phone
+                a.footer__phone(href=item.phone.url)= item.phone.text
+              if item.dev
+                +text-base(item.dev, 'footer__dev-text')

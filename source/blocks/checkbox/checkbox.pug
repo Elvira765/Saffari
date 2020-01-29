@@ -1,0 +1,7 @@
+mixin checkbox(data,className)
+	.checkbox(class=className)
+		+btn(data.btn, 'checkbox__btn')
+		label.checkbox__content
+			input.checkbox__input(type="checkbox" name="argeement")
+			span.checkbox__text!=data.text
+			a.checkbox__target(href=data.target.href target="_blank")!=data.target.text

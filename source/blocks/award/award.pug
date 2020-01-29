@@ -1,0 +1,29 @@
+include ../main/main.pug
+include ../core/title/title.pug
+include ../image/image.pug
+mixin award(data)
+	.award
+		+main
+			+title(data.title)
+			+subtitle(data.subtitle)
+			.award__box
+				.award__slider.swiper-container
+					.award__topnav
+						each item in data.topnav
+							a.award__topnav-item(class=(item.active ? 'award__topnav-item--active' : '') href=item.url)!=item.year
+					.swiper-wrapper
+						each el in data.slide
+							.award__content.swiper-slide
+								.award__text=el.text
+								+image(el.image, 'award__image')
+					.award__pager
+						.award__arrow
+							.award__prev
+								svg
+									use(xlink:href=loadAssets('./svg/layer1w.svg'))
+							.award__number
+								span.award__counter 1
+								span!= `/${data.slide.length}`
+							.award__next
+								svg
+									use(xlink:href=loadAssets('./svg/layer2w.svg'))

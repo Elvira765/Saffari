@@ -1,0 +1,23 @@
+$parent: h4;
+
+@include block($parent) {
+  font-size: rem(18);
+  // line-height: 2.3;
+  line-height: 1.2;
+  color: $black;
+
+  @media screen and (min-width: $tMin) {
+    line-height: 1.35;
+    font-size: rem(25);
+  }
+
+  @include modifier($parent, 'up') {
+    text-transform: uppercase;
+    letter-spacing: rem(1);
+    line-height: 1.6;
+
+    @media screen and (min-width: $tMin) {
+      line-height: 1.7;
+    }
+  }
+}

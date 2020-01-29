@@ -1,0 +1,20 @@
+include ../picture/picture.pug
+include ../breadcrumbs/breadcrumbs.pug
+include ../fonts/text/text.pug
+mixin about(data,className)
+	.about(class=className)
+		+picture(data.picture, 'about__picture')
+		+main
+			+breadcrumbs(data.breadcrumbs, 'about__breadcrumbs')
+			.about__main
+				.about__content
+					.about__left
+						.about__title!= data.title
+						.about__subject!= data.subject
+					.about__right
+						+text(data.text, 'about__text')
+					.about__info
+						each item in data.info
+							.about__info-container
+								.about__info-number!=item.number
+								span.about__info-text!=item.text

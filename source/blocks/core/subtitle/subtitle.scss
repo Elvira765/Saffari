@@ -1,0 +1,19 @@
+$parent: subtitle;
+
+@include block($parent) {
+	font-size: rem(18);
+	line-height: rem(30);
+	color: #08131F;
+	font-weight: 400;
+	font-family: $Baron;
+
+	@media (min-width: $tMin) {
+		font-size: rem(22);
+		line-height: rem(30);
+	}
+
+	@media (min-width: $dMin) {
+		font-size: rem(22);
+		line-height: rem(30);
+	}
+}

@@ -1,0 +1,18 @@
+{
+  "success": true,
+  "text_btn": "показать еще 2 отзыва",
+  "items": [
+    {
+      "embed": "tzbSLFL2qwI",
+      "img": "./assets/images/home/reviews/reviews_video.jpg",
+      "title": "Дом построили в течение года.",
+      "text": "Проект «Денвер», 273 м²"
+    },
+    {
+      "embed": "tzbSLFL2qwI",
+      "img": "./assets/images/home/reviews/slider/slide_1.jpg",
+      "title": "Все наши мечты воплощаются в реальность, всё возможно!",
+      "text": "Договор №42 от 10.05.2016, 520 м²"
+    }
+  ]
+}

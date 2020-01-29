@@ -1,0 +1,263 @@
+$parent: footer;
+
+@include block($parent) {
+  padding: rem(36) 0 rem(42);
+  background-color: $black;
+
+  @media screen and (min-width: $tMin) and (max-width: $tMax) {
+    padding: rem(47) 0 rem(56);
+  }
+
+  @media screen and (min-width: $dMin) {
+    padding: rem(74) 0 rem(102);
+  }
+
+  // @include element ($parent, 'content') {
+  //
+  // }
+
+  @include element ($parent, 'top') {
+    @media screen and (min-width: $dMin) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: rem(70);
+    }
+  }
+
+  @include element ($parent, 'links') {
+    display: none;
+
+    @media screen and (min-width: $tMin) {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: rem(19);
+    }
+
+    @media screen and (min-width: $dMin) {
+      width: 76.4%;
+    }
+  }
+
+  @include element ($parent, 'links-col') {
+    width: 33.333%;
+    padding-right: rem(6);
+
+    @media screen and (min-width: $tMin) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  @include element ($parent, 'links-item') {
+    color: $gray3;
+
+    &:hover {
+      color: $w;
+    }
+  }
+
+  @include element ($parent, 'contacts') {
+    width: 100%;
+    margin-bottom: rem(44);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: $tMin) {
+      align-items: flex-start;
+      margin-bottom: rem(53);
+    }
+
+    @media screen and (min-width: $tMin) and (max-width: $tMax) {
+      flex-direction: row;
+    }
+
+    @media screen and (min-width: $dMin) {
+      width: 23.6%;
+    }
+  }
+
+  @include element ($parent, 'contacts-item') {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: rem(17);
+
+    @media screen and (min-width: $tMin) and (max-width: $tMax) {
+      width: 33.333%;
+      padding-right: rem(6);
+    }
+
+    @media screen and (min-width: $dMin) {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: rem(31);
+    }
+
+    &:nth-of-type(2n) {
+      @media screen and (min-width: $tMin) and (max-width: $tMax) {
+        width: 36%;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .text-little {
+      color: $w;
+
+      @media screen and (min-width: $tMin) {
+        text-align: left;
+      }
+    }
+  }
+
+  @include element ($parent, 'contacts-item-address') {
+    br {
+      @media screen and (max-width: $mMax) {
+        display: none;
+      }
+    }
+  }
+
+  @include element ($parent, 'bottom') {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: $dMin) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  @include element ($parent, 'bottom-row') {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: $tMin) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media screen and (min-width: $tMin) and (max-width: $tMax) {
+      margin-bottom: rem(12);
+    }
+
+    @media screen and (min-width: $dMin) {
+      width: auto;
+    }
+
+    &:last-of-type {
+      @media screen and (min-width: $tMin) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include element ($parent, 'bottom-text') {
+    max-width: 100%;
+    color: $gray2;
+    text-align: center;
+
+    a {
+      color: $gray3;
+
+      &:hover {
+        color: $w;
+      }
+    }
+  }
+
+  @include element ($parent, 'dev-text') {
+    max-width: 100%;
+    color: $gray2;
+    text-align: center;
+
+    a {
+      color: $gray3;
+
+      &:hover {
+        color: $w;
+      }
+    }
+  }
+
+  @include element ($parent, 'socials') {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: rem(25) 0 rem(28) 0;
+
+    @media screen and (min-width: $tMin) {
+      margin: 0;
+    }
+
+    @media screen and (min-width: $dMin) {
+      margin-left: rem(22);
+    }
+  }
+
+  @include element ($parent, 'socials-item') {
+    width: rem(48);
+    height: rem(48);
+    border: 2px solid rgba($gray2, 0.3);
+    border-radius: 50%;
+    margin-right: rem(10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border 0.4s ease;
+
+    @media screen and (min-width: $dMin) {
+      width: rem(58);
+      height: rem(58);
+      margin-right: rem(13);
+    }
+
+    svg {
+      display: block;
+      width: rem(19);
+      height: rem(19);
+      fill: $w;
+
+      @media screen and (min-width: $dMin) {
+        width: rem(21);
+        height: rem(21);
+      }
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      border: 2px solid rgba($w, 0.3);
+    }
+  }
+
+  @include element ($parent, 'phone') {
+    margin-bottom: rem(20);
+    font-size: rem(20);
+    line-height: 1.1;
+    letter-spacing: rem(1);
+    color: $w;
+
+    @media screen and (min-width: $tMin) {
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $dMin) {
+      font-size: rem(25);
+      margin-right: rem(112);
+    }
+
+    @media screen and (min-width: $dMin) and (max-width: 1268px) {
+      font-size: rem(22);
+      margin-right: rem(32);
+    }
+  }
+}

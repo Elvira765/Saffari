@@ -1,0 +1,39 @@
+include ./../fonts/text/text.pug
+
+mixin header(obj, className)
+  .header(class=className)
+    .header__content.main
+      .header__top
+        .header__top-left
+          a.header__logo(href='/')
+            svg
+              use(xlink:href=loadAssets('./svg/logo.svg'))
+          +text(obj.top.text, 'header__top-text')
+        .header__top-right
+          if obj.top.contacts
+            .header__top-contacts
+              a.header__top-phone(href=obj.top.contacts.phone.url)= obj.top.contacts.phone.text
+              p.header__top-time= obj.top.contacts.time
+            +btn('#', 'Задать вопрос', 'btn--transparent header__top-bid')
+        .header__m-btns
+          a.header__btn(href=obj.top.contacts.phone.href)
+            span.header__btn-phone
+              svg
+                use(xlink:href=loadAssets('./svg/phone.svg'))
+          a.header__btn.header__btn--menu
+            .header__btn-menu
+              span
+              span
+              span
+      .header__bottom
+        ul.header__list
+          each item in obj.list
+            li.header__list-item(class=(item.list ? 'header__list-item--more' : ''))
+              a.header__list-link(href=item.url)= item.text
+              if item.list
+                ul.header__list-more
+                  li.header__list-more-item.header__list-more-item--m.h6
+                    a.header__list-more-link(href=item.url)= item.text
+                  each el in item.list
+                    li.header__list-more-item.h6
+                      a.header__list-more-link(href=el.url)= el.text

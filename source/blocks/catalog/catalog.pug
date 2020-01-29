@@ -1,0 +1,15 @@
+include ../main/main.pug
+include ../core/title/title.pug
+mixin catalog(data,className)
+	.catalog
+		+main
+			+title(data.title, 'catalog__title')
+			.catalog__search
+				.catalog__search-left
+					.catalog__offer!=data.offer
+					.catalog__order!=data.order
+				.catalog__search-right
+					.catalog__address!=data.address
+					.catalog__search-inner
+						.catalog__metro!=data.metro
+						.catalog__district!=data.district

@@ -1,0 +1,25 @@
+$parent: button;
+
+@include block($parent) {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: rem(60);
+	max-width: rem(250);
+	padding: 0 rem(28);
+	border: 1px solid $red;
+	background: $w;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	color: #303030;
+
+	&:hover {
+		background-color: $pink;
+		color: $w;
+	}
+
+	@include element($parent, 'text') {
+		font-size: rem(16);
+		line-height: rem(24);
+		
+	}
+}

@@ -1,0 +1,146 @@
+{
+	"image":{
+		"src": "source/static/assets/images/contacts/Rectangle.png",
+		"alt": "map"
+	},
+	"breadcrumbs": {
+		"items": [
+			{
+				"url": "./",
+				"text": "Главная"
+			},
+			{
+				"url": "#",
+				"text": "Ещё"
+			}
+		]
+	},
+	"title":"Контакты",
+	"info":{
+		"item":[
+			{
+				"title":"Адрес",
+				"text":"119034,Москва,Пресненская Набережная,12",
+				"svg":"./svg/Vec1.svg"
+			},
+			{
+				"title":"Телефон",
+				"text":"+7(495)000-00-00",
+				"svg":"./svg/Vec2.svg"
+			},
+			{
+				"title":"E-mail",
+				"text":"119034",
+				"svg":"./svg/Vec3.svg"
+			}
+		],
+		"social":{
+			"title":"Saffari Estate в соцсетях",
+			"icon":[
+				{
+					"href":"#",
+					"svg":"./svg/layer4.svg"
+				},
+				{
+					"href":"#",
+					"svg":"./svg/layer5.svg"
+				},
+				{
+					"href":"#",
+					"svg":"./svg/layer6.svg"
+				}
+			]
+		}
+	},
+	"contact":[
+		{
+			"title":"Реквизиты",
+			"requisites":[
+				[
+					{
+						"title":"Наимнование организации",
+						"text":"Saffari Estate"
+					},
+					{
+						"title":"Юридический адрес",
+						"text":"119034, Москва, Пресненская Набережная, 12"
+					},
+					{
+						"title":"Адрес",
+						"text":"119034, Москва, Пресненская Набережная, 12"
+					},
+					{
+						"title":"Генеральный директор",
+						"text":"А.Н. Смирнов"
+					}
+				],
+				[
+					{
+						"title":"ИНН",
+						"text":"8770636901"
+					},
+					{
+						"title":"ОГРН",
+						"text":"7870836922567"
+					},
+					{
+						"title":"БИК",
+						"text":"90223690"
+					}
+				]
+			]
+
+		},
+		{
+			"title":"Пресс-служба",
+			"subtitle":"компании Saffari Estate",
+			"press":[
+				{
+					"image":{
+						"src":"source/static/assets/images/contacts/avat.png",
+						"alt":"woman"
+					},
+					"name":"Анна Сергеева",
+					"profession":"Директор по маркетингу и PR",
+					"mail":"annasergeeva@saffariestate.com",
+					"button":{
+						"href":"#",
+						"text":"Написать специалисту"
+					}
+				},
+				{
+					"image":{
+						"src":"source/static/assets/images/contacts/avat.png",
+						"alt":"woman"
+					},
+					"name":"Анна Сергеева",
+					"profession":"Директор по маркетингу и PR",
+					"mail":"annasergeeva@saffariestate.com",
+					"button":{
+						"href":"#",
+						"text":"Написать специалисту"
+					}
+				}
+			]
+		},
+		{
+			"title":"Задать вопрос",
+			"question":{
+				"text":"Задайте вопрос пресс-службе, и специалист <br> ответит Вам в ближайшее время",
+				"title":"Телефон отдела",
+				"number":"+7(495)000-00-00",
+				"checkbox":{
+					"text":"Согласен на обработку",
+					"target":{
+						"href":"#",
+						"text":"персональных данных"
+					},
+					"btn":{
+						"href":"#",
+						"text":"Отправить заявку"
+					}
+				}
+			}
+		}
+	]
+}

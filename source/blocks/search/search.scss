@@ -1,0 +1,23 @@
+$parent: search;
+
+@include block($parent) {
+	position: relative;
+	text-align: center;
+
+	@include element($parent, 'text') {
+		position: absolute;
+		color: $w;
+		width: 100%;
+		font-size: rem(34);
+		line-height: rem(44);
+		font-family: $Baron;
+		transform: translate(0, -50%);
+		top: 50%;
+		padding: rem(15);
+
+		@media (min-width: $tMin){
+			font-size: rem(36);
+			padding: rem(60);
+		}
+	}
+}

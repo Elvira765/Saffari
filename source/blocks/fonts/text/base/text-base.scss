@@ -1,0 +1,12 @@
+$parent: text-base;
+
+@include block($parent) {
+  font-size: rem(14);
+  line-height: 1.75;
+  color: $black;
+
+  @media screen and (min-width: $tMin) {
+    font-size: rem(16);
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,66 @@
+$parent: more;
+
+@include block($parent) {
+	padding: rem(8) rem(15);
+	font-size: rem(12);
+	line-height: rem(15);
+	background-color: $red3;
+	color:$w;
+	position: relative;
+	box-sizing: border-box;
+	border: none;
+
+	@media (min-width: $tMin) {
+		padding: rem(8) rem(20);
+		font-size: rem(10);
+		line-height: rem(15);
+	}
+	
+	@media (min-width: $dMin) {
+		padding: rem(8) rem(50);
+		font-size: rem(12);
+		line-height: rem(15);
+	}
+	
+	@media (min-width: $d1280) {
+		padding: rem(12) rem(50);
+		font-size: rem(12);
+		line-height: rem(15);
+	}
+		
+		display: inline-block;
+		outline: none;
+		margin: auto;
+		font-weight: 500;
+		cursor: pointer;
+	  
+		&:before,
+		&:after {
+		  content: '';
+		  position: absolute;
+		  background-color: $red3;
+		  box-sizing: border-box;
+		  z-index: 1; // чтобы псевдоэлементы были за кнопкой
+		}
+	  
+		// Правая сторона
+		&:before {
+		  width: rem(10); // толщина кнопки
+		  height: 100%; // на всю высоту
+		  left: 100%; // прижимаем к правому краю
+		  top: 0;
+		  transform: skewY(-45deg);
+		  transform-origin: 0 100%; // относительно какой точки делать наклон
+		}
+	  
+		// Верхняя сторона
+		&:after {
+		  width: 100%; // на всю ширину
+		  bottom: 100%; // прижимаем к верхнему краю
+		  height: rem(10); // толщина кнопки
+		  left: 0;
+		  transform: skewX(-45deg);
+		  transform-origin: 0 100%; // относительно какой точки делать наклон
+		}
+	  }
+

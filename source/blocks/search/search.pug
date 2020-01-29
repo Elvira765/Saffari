@@ -1,0 +1,5 @@
+include ../picture/picture.pug
+mixin search (data,className)
+	.search
+		+picture(data.picture,'search__picture')
+		.search__text!=data.text

@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "items": [
+    {
+      "src": "./assets/images/gallery/gallery_0.jpg",
+      "alt": "gallery"
+    },
+    {
+      "src": "./assets/images/gallery/gallery_1.jpg",
+      "alt": "gallery"
+    },
+    {
+      "src": "./assets/images/gallery/gallery_2.jpg",
+      "alt": "gallery"
+    },
+    {
+      "src": "./assets/images/gallery/gallery_3.jpg",
+      "alt": "gallery"
+    },
+    {
+      "src": "./assets/images/gallery/gallery_4.jpg",
+      "alt": "gallery"
+    }
+  ]
+}

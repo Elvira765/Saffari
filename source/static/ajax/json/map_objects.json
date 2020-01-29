@@ -1,0 +1,88 @@
+﻿{
+  "OBJECTS": {
+    "01": {
+      "COORDS": "55.78621247496,37.495509243346",
+      "img": "./assets/images/home/map_house.jpg",
+      "area": "787м²",
+      "name": "Проект дома Нэшвилл",
+      "link": "/project.html"
+    },
+    "02": {
+      "COORDS": "55.78621247496,37.495509243346",
+      "img": "./assets/images/home/map_house.jpg",
+      "area": "687м²",
+      "name": "Проект дома Нэшвилл 6",
+      "link": "/project.html"
+    },
+    "03": {
+      "COORDS": "55.74114,37.622926",
+      "img": "./assets/images/home/map_house.jpg",
+      "area": "487м²",
+      "name": "Проект дома Нэшвилл 5",
+      "link": "/project.html"
+    },
+    "04": {
+      "COORDS": "55.718872,37.499893",
+      "img": "./assets/images/home/map_house.jpg",
+      "area": "702м²",
+      "name": "Проект дома Нэшвилл 4",
+      "link": "/project.html"
+    },
+    "05": {
+      "COORDS": "55.787786,37.581882",
+      "img": "./assets/images/home/map_house.jpg",
+      "area": "287м²",
+      "name": "Проект дома Нэшвилл 3",
+      "link": "/project.html"
+    },
+    "06": {
+      "COORDS": "55.735495,37.584146",
+      "img": "./assets/images/home/map_house.jpg",
+      "area": "1086м²",
+      "name": "Проект дома Нэшвилл 2",
+      "link": "/project.html"
+    },
+    "07": {
+      "COORDS": "55.710803,37.6077",
+      "img": "./assets/images/home/map_house.jpg",
+      "area": "1082м²",
+      "name": "Проект дома Нэшвилл 1",
+      "link": "/project.html"
+    },
+    "08": {
+      "COORDS": "55.710803,37.6077",
+      "img": "./assets/images/home/map_house.jpg",
+      "area": "707м²",
+      "name": "Проект дома Нэшвилл 7",
+      "link": "/project.html"
+    },
+    "09": {
+      "COORDS": "55.807805,37.649795",
+      "img": "./assets/images/home/map_house.jpg",
+      "area": "787м²",
+      "name": "Проект дома Нэшвилл 8",
+      "link": "/project.html"
+    },
+    "10": {
+      "COORDS": "55.807805,37.649795",
+      "img": "./assets/images/home/map_house.jpg",
+      "area": "305м²",
+      "name": "Проект дома Нэшвилл 9",
+      "link": "/project.html"
+    },
+    "11": {
+      "COORDS": "55.63009,37.514473",
+      "img": "./assets/images/home/map_house.jpg",
+      "area": "382м²",
+      "name": "Проект дома Нэшвилл 10",
+      "link": "/project.html"
+    },
+    "12": {
+      "COORDS": "55.743552165791,37.510568174621",
+      "img": "./assets/images/home/map_house.jpg",
+      "area": "882м²",
+      "name": "Проект дома Нэшвилл 11",
+      "link": "/project.html"
+    }
+  }
+}

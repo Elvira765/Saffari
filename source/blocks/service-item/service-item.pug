@@ -1,0 +1,12 @@
+mixin service-item(data,className)
+	.service-item.swiper-container(class=className)
+		.swiper-wrapper
+				each item in data
+					.service-item__content.swiper-slide
+						each el in item
+							.service-item__inner
+								.service-item__icon
+									svg.service-item__svg
+										use(xlink:href=loadAssets(`${el.svg}`))
+								.service-item__title!=el.title
+								.service-item__text!=el.text

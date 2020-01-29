@@ -1,0 +1,40 @@
+$parent: checkbox;
+
+@include block($parent) {
+	margin-top: rem(15);
+
+	@media (min-width: $tMin) {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		margin-top: rem(27);
+	}
+
+	@include element($parent, 'content') {
+		margin-top: rem(30);
+		display: flex;
+		align-items: center;
+	}
+
+	@include element($parent, 'text') {
+		font-size: rem(14);
+		line-height: rem(26);
+		color: #BDBDBD;
+		margin-left: rem(12);
+	}
+
+	@include element($parent, 'target') {
+		color:$red;
+		font-size: rem(14);
+		line-height: rem(26);
+	}
+
+	@include element($parent, 'btn') {
+		background: $red;
+		width: 100%;
+
+		@media (min-width: $tMin) {
+			width: auto;
+		}
+	}
+}

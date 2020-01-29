@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "items": [
+    {
+      "src": "./assets/images/about/collective.jpg",
+      "alt": "collective"
+    },
+    {
+      "src": "./assets/images/about/collective.jpg",
+      "embed": "l0KaW0kmPQc"
+    },
+    {
+      "src": "./assets/images/about/collective.jpg",
+      "alt": "collective"
+    }
+  ]
+}

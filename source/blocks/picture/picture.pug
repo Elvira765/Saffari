@@ -1,0 +1,6 @@
+mixin picture(data,className)
+	picture.picture(class=className)
+		source(media='(min-width: 1280px)', srcset=data.image1280, type='image/png')
+		source(media='(min-width: 768px)', srcset=data.image768, type='image/png')
+		source(media='(min-width: 320px)', srcset=data.image320, type='image/png')
+		img.picture__image(src=data.image1280, alt=data.alt)

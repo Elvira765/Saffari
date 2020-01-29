@@ -1,0 +1,23 @@
+$parent: arrow;
+
+@include block($parent) {
+	display: flex;
+
+	@include element($parent, 'item') {
+		width: rem(15) ;
+		height: rem(16);
+		cursor: pointer;
+		pointer-events: visible;
+		fill: $red;
+		stroke: $red;
+
+		&:first-of-type{
+			margin-right: rem(25);
+		}
+		
+		&:hover{
+			fill: $pink;
+			stroke: $pink;
+		}
+	}
+}

@@ -1,0 +1,37 @@
+$parent: list;
+
+@include block($parent) {
+  list-style: none;
+
+  li {
+    position: relative;
+    text-indent: rem(18);
+    line-height:rem(22);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: rem(8);
+      left: 0;
+      width: rem(8);
+      height: rem(8);
+      background-color: $red3;
+    }
+  }
+
+  &:not(.h6) {
+    font-size: rem(18);
+    line-height: 1.7;
+    color: $black;
+  }
+
+  &.h6 {
+    line-height: 1.8;
+
+    li::before {
+      left: rem(1);
+      width: rem(7);
+      height: rem(7);
+    }
+  }
+}

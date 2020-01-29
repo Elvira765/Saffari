@@ -1,0 +1,15 @@
+$parent: h3;
+
+@include block($parent) {
+  font-size: rem(13);
+  color: $black;
+
+  @media (min-width: $tMin) {
+    font-size: rem(15);
+    line-height: 1.3;
+  }
+  @media (min-width: $dMin) {
+    font-size: rem(20);
+    line-height: 1.5;
+  }
+}

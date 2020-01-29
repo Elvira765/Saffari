@@ -1,0 +1,11 @@
+extends ../layouts/main.pug
+
+include ../blocks/search/search.pug
+include ../blocks/catalog/catalog.pug
+
+block vars
+	- homepage = true;
+	- pageInfo = require('../data/searchPage.json');
+block content
+	+search(pageInfo.search)
+	+catalog(pageInfo.catalog)

@@ -1,0 +1,6 @@
+mixin breadcrumbs(obj, className)
+	.breadcrumbs(class=className)
+			if obj.items
+				.breadcrumbs__item
+					each item in obj.items
+						a.breadcrumbs__item-link(href=item.url)!=item.text

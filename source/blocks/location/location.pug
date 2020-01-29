@@ -1,0 +1,13 @@
+include ../image/image.pug
+include ../main/main.pug
+include ../core/button/button.pug
+mixin location(data)
+	.location
+		+main
+			.location__content
+				+image(data.image, 'location__image')
+				.location__content-wpn
+					.location__subtitle!= data.subtitle
+					.location__title!= data.title
+					+button(data.btn, 'location__button')
+			img.location__map(src=data.map.src, alt=data.map.alt)

@@ -1,0 +1,8 @@
+mixin requisites(data,className)
+	.requisites(class=className)
+		each el in data
+			.requisites__item-wpn
+				each item in el
+					.requisites__item
+						.requisites__title!=item.title
+						.requisites__text!=item.text

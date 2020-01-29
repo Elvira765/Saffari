@@ -1,0 +1,12 @@
+$parent: h7;
+
+@include block($parent) {
+  font-size: rem(18);
+  line-height: 1.7;
+  color: $black;
+
+  @include modifier($parent, 'up') {
+    text-transform: uppercase;
+    line-height: 1.8;
+  }
+}
