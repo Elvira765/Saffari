@@ -1,23 +1,225 @@
 $parent: search;
 
 @include block($parent) {
-	position: relative;
-	text-align: center;
+	padding: 0 rem(64);
 
-	@include element($parent, 'text') {
+	label{
+		font-size: rem(14);
+		line-height: rem(16);
+		margin-bottom: rem(16);
+		margin-right: rem(16);
+	}
+
+	@include element($parent, 'step') {
+        padding: rem(32) 0;
+	}
+
+	@include element($parent, 'form-location') {
+        display: flex;
+		flex-direction: column;
+		text-align: end;
+		width: 342px;
+	}
+
+	@include element($parent, 'city') {
+		border-bottom: 1px solid #999999;
+		width: rem(224);
+		font-size: rem(14);
+		line-height: rem(16);
+		margin-left: rem(5);
+	}
+
+	@include element($parent, 'point') {
+		border-bottom: 1px solid #999999;
+		width: rem(224);
+		font-size: rem(14);
+		line-height: rem(16);
+		margin-left: rem(5);
+	}
+
+	@include element($parent, 'map-text') {
+		margin-top: rem(45);
+		margin-bottom: rem(16);
+	}
+	.radio {
 		position: absolute;
-		color: $w;
-		width: 100%;
-		font-size: rem(34);
-		line-height: rem(44);
-		font-family: $Baron;
-		transform: translate(0, -50%);
-		top: 50%;
-		padding: rem(15);
+		z-index: -1;
+		opacity: 0;
+		margin: 10px 0 0 7px;
+	}
+	.radio + label {
+		position: relative;
+		padding: 0 0 0 20px;
+		cursor: pointer;
+	}
+	.radio + label:before {
+		content: '';
+		position: absolute;
+		top: 2px;
+		left: 0;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: #ffffff;
+		border: 1px solid #999999;
+	}
+	.radio + label:after {
+		content: '';
+		position: absolute;
+		top: 2px;
+		left: 0px;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: #ffffff;
+		border: 3px solid #0EC261;
+		opacity: 0;
+		transition: .2s;
+	}
+	.radio:checked + label:after {
+		opacity: 1;
+	}
 
-		@media (min-width: $tMin){
-			font-size: rem(36);
-			padding: rem(60);
-		}
+	.checkbox {
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+		margin: 10px 0 0 20px;
+	}
+	.checkbox + label {
+		position: relative;
+		padding: 0 0 0 20px;
+		cursor: pointer;
+	}
+	.checkbox + label:before {
+		content: '';
+		position: absolute;
+		top: 2px;
+		left: 0;
+		width: 12px;
+		height: 12px;
+		border: 1px solid #0EC261;
+		background: #ffffff;
+		transition: .2s;
+	}
+	.checkbox + label:after {
+		content: '';
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		width: 13px;
+		height: 10px;
+		transition: .2s;
+		background: url(../source/assets/svg/checkbox.svg) no-repeat;
+		display: none;
+	}
+
+	.checkbox:checked + label:after {
+		display: block;
+	}
+
+	@include element($parent, 'catalog') {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: rem(48);
+	}
+
+	@include element($parent, 'car') {
+		min-width: 368px;
+		min-height: 224px;
+		border: 1px solid #EEEEEE;
+		padding: rem(16);
+		position: relative;
+	}
+
+	@include element($parent, 'car-name') {
+		font-size: rem(18);
+    	line-height: rem(21);
+	}
+
+	@include element($parent, 'car-price') {
+		font-size: rem(14);
+		line-height: rem(16);
+		color: #999999;
+	}
+
+	@include element($parent, 'car-image') {
+		position: absolute;
+		bottom: rem(16);
+		right: rem(16);
+	}
+
+	@include element($parent, 'date') {
+		display: flex;
+		flex-direction: column;
+		width: rem(267);
+		text-align: end;
+	}
+
+	@include element($parent, 'tariff') {
+		display: flex;
+		flex-direction: column;
+	}
+
+	p{
+		margin-bottom: rem(16);
+		margin-top: rem(32);
+		font-size: rem(14);
+		line-height: rem(16);
+		color: #121212;
+	}
+
+	@include element($parent, 'service') {
+		display: flex;
+		flex-direction: column;
+	}
+
+	@include element($parent, 'order') {
+		display: flex;
+		flex-wrap: wrap;
+		flex-shrink: 0;
+	}
+
+	@include element($parent, 'order-confirmation') {
+		font-size: rem(24);
+		line-height: rem(28);
+		color: #121212;
+	}
+
+	@include element($parent, 'order-model') {
+		font-size: rem(18);
+		line-height: rem(21);
+		color: #121212;
+		margin-top: rem(16);
+	}
+
+	@include element($parent, 'order-number') {
+		font-size: rem(14);
+		line-height: rem(16);
+		color: #121212;
+		margin-top: rem(8);
+		border: 1px solid #999999;
+		box-sizing: border-box;
+		border-radius: 4px;
+		width: rem(96);
+		padding: rem(4) rem(8);
+	}
+
+	@include element($parent, 'order-tank') {
+		font-size: rem(14);
+		line-height: rem(16);
+		color: #121212;
+		margin-top: rem(8);
+	}
+
+	@include element($parent, 'order-date') {
+		font-size: rem(14);
+		line-height: rem(16);
+		color: #121212;
+		margin-top: rem(8);
+	}
+
+	@include element($parent, 'order-image') {
+		min-width: rem(116);
 	}
 }

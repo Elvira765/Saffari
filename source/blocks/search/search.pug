@@ -1,5 +1,65 @@
-include ../picture/picture.pug
-mixin search (data,className)
-	.search
-		+picture(data.picture,'search__picture')
-		.search__text!=data.text
+include ../image/image.pug
+mixin search(data,className)
+	.search(class=className)
+		.search__step.search__step--active
+			form.search__form-location
+				label Город
+					input.search__city(type="search" placeholder="Начните воодить город..." name="city")
+				label Пункт выдачи
+					input.search__point(type="search" placeholder="Начните вводить пункт ..." name="point")
+			.search__map-wrp
+					p.search__map-text Выбрать на карте:
+					+image(data.map, 'search__map')
+		.search__step
+			form.search__form-car
+				input.radio(type="radio" name="car" value="Все модели" id="all car" checked)
+				label(for="all car") Все модели
+				input.radio(type="radio" name="car" value="Эконом" id="econom")
+				label(for="econom") Эконом
+				input.radio(type="radio" name="car" value="Премиум" id="premium")
+				label(for="premium") Премиум
+			.search__catalog
+				each item in data.car
+					.search__car
+						.search__car-name!=item.name
+						.search__car-price!=item.price
+						+image(item.image, 'search__car-image')
+		.search__step
+			form.search__additional
+				p Цвет
+				.search__color
+					input.radio(type="radio" name="color" value="Любой" id="all color")
+					label(for="all color") Любой
+					input.radio(type="radio" name="color" value="Красный" id="red")
+					label(for="red") Красный
+					input.radio(type="radio" name="color" value="Голубой" id="blue" checked)
+					label(for="blue") Голубой
+				p Дата аренды
+				.search__date
+					label C
+						input.search__city(type="datetime" placeholder="Введите дату и время" name="start")
+					label По
+						input.search__point(type="datetime" placeholder="Введите дату и время" name="finish")
+				p Тариф
+				.search__tariff 
+					input.radio(type="radio" name="tariff" value="Минутный" id="min")
+					label(for="min") Поминутно, 7₽/мин
+					input.radio(type="radio" name="tariff" value="По суточно" id="day" checked)
+					label(for="day") На сутки, 1999 ₽/сутки
+				p Доп услуги
+				.search__service
+					input.checkbox(type="checkbox" id="full tank" checked)
+					label(for="full tank") Полный бак, 500р
+					input.checkbox(type="checkbox" id="baby chair")
+					label(for="baby chair") Детское кресло, 200р
+					input.checkbox(type="checkbox" id="right wheel")
+					label(for="right wheel") Правый руль, 1600р
+		.search__step
+			.search__order
+				.search__order-wrapper
+					.search__order-confirmation!=data.order.confirmation
+					.search__order-model!=data.order.model
+					.search__order-number!=data.order.number
+					.search__order-tank!=data.order.tank
+					.search__order-date!=data.order.date
+				+image(data.order.image, 'search__order-image')

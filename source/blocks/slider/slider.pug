@@ -1,0 +1,20 @@
+include ../image/image.pug
+
+mixin slider(data, className)
+    .slider(class=className)
+        .slider__wrapper
+            .slider__items
+                each item in data.items
+                    .slider__item
+                        +image(item.image, 'slider__image')
+                        .slider__content
+                            .slider__title!= item.title
+                            .slider__text!= item.text
+                            button.slider__btn
+                                span.slider__btn-text!=item.btn.text
+        a.slider__control.slider__control_prev(href="#" role="button")
+            svg.slider__arrow.slider__control
+                use(xlink:href=loadAssets('./svg/Vector.svg'))
+        a.slider__control.slider__control_next(href="#" role="button")
+            svg.slider__arrow.slider__control
+                use(xlink:href=loadAssets('./svg/Vector (1).svg'))

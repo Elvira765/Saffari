@@ -1,0 +1,11 @@
+include ../menu/menu.pug
+include ../content/content.pug
+include ../slider/slider.pug
+include ../container/container.pug
+
+mixin carsharing(data,className)
+	+container
+		.carsharing
+			+menu(data.menu, 'carsharing__menu')
+			+content(data.content, 'carsharing__content')
+			+slider(data.slider, 'carsharing__slider')

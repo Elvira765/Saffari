@@ -1,0 +1,164 @@
+$parent: menu;
+
+@include block($parent) {
+    @media (min-width: $tMin) {
+        background: #151B1F;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    @include element($parent, 'language-btn') {
+        display: none;
+        @media (min-width: $tMin) {
+            display: block;
+            width: rem(48);
+            height: rem(48);
+            border-radius: 50%;
+
+            &:hover{
+                border: 1px solid #EEEEEE;
+
+                @include element($parent, 'language') {
+                    color: #EEEEEE;
+                }
+            }
+        }
+    }
+
+    @include element($parent, 'language') {
+        display: none;
+        @media (min-width: $tMin) {
+            display: block;
+            color: #0EC261;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-weight: bold;
+            font-size: rem(13);
+            line-height: rem(15);
+        }
+    }
+
+    @include element($parent, 'burger-button') {
+        position: fixed;
+        top:rem(21);
+        left: rem(16);
+        z-index: 30;
+        width: rem(32);
+        height: rem(32);
+
+        @media (min-width: $tMin) {
+            top:rem(34);
+        }
+    }
+
+    @include element($parent, 'burger-lines') {
+        position: absolute;
+        width: rem(24);
+        height: rem(3);
+        background-color: #121212;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        border-radius: rem(8);
+        &::after{
+            position: absolute;
+            content: "";
+            width: rem(24);
+            height: rem(3);
+            background-color: #121212;
+            top:rem(8);
+            border-radius: rem(8);
+        }
+
+        &::before{
+            position: absolute;
+            content: "";
+            width: rem(24);
+            height: rem(3);
+            background-color: #121212;
+            top:rem(-8);
+            border-radius: rem(8);
+        }
+
+        @media (min-width: $tMin) {
+            background-color: #ffffff;
+
+            &::after{
+                background-color: #ffffff;
+            }
+            &::before{
+                background-color: #ffffff;
+            }
+        }
+    }
+
+    @include element($parent, 'burger') {
+        @include modifier($parent, 'active') {
+			@include element($parent, 'burger-lines') {
+                background-color: transparent;
+
+                &::before{
+                    top: 0;
+                    transform: rotate(45deg);
+                }
+
+                &::after{
+                    top: 0;
+                    transform: rotate(-45deg);
+                }
+            }
+		}
+    }
+
+    @include element($parent, 'burger-nav') {
+        padding-top: rem(80);
+        position: fixed;
+        z-index: 20;
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        background-color: #111518;
+        overflow-y: auto;
+        left: -100%;
+    }
+
+    @include element($parent, 'burger') {
+        @include modifier($parent, 'active') {
+            @include element($parent, 'burger-nav') {
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
+    @include element($parent, 'burger-link') {
+        padding: rem(30);
+        font-size: rem(32);
+        line-height: rem(37);
+        color: #FFFFFF;
+        text-transform: uppercase;
+
+        &:hover{
+            color:#0EC261;
+            transition: border 0.4s ease, color 0.4s ease;
+        }
+    }
+
+    @include element($parent, 'burger-overlay') {
+        display: none;
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 10;
+    }
+
+    @include element($parent, 'burger') {
+        @include modifier($parent, 'active') {
+			@include element($parent, 'burger-overlay') {
+                display: block;
+                background: rgba(21, 27, 31, 0.81);
+            }
+        }
+    }
+}

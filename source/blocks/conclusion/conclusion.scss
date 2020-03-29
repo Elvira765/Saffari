@@ -1,0 +1,84 @@
+$parent: conclusion;
+
+@include block($parent) {
+		padding: rem(32) rem(64) rem(32) rem(32);
+
+		@include element($parent, 'title') {
+				font-size: rem(18);
+				line-height: rem(21);
+				text-align: end;
+				font-weight: 600;
+		}
+
+		@include element($parent, 'items') {
+			margin-top: rem(40);
+	}
+
+		@include element($parent, 'item') {
+			font-size: rem(14);
+			line-height: rem(16);
+			color: #121212;
+	}
+
+	@include element($parent, 'location') {
+		font-size: rem(14);
+		line-height: rem(16);
+		color: #999999;
+}
+
+@include element($parent, 'model') {
+	font-size: rem(14);
+	line-height: rem(16);
+	color: #999999;
+}
+
+@include element($parent, 'time') {
+	font-size: rem(14);
+	line-height: rem(16);
+	color: #999999;
+}
+
+@include element($parent, 'tariff') {
+	font-size: rem(14);
+	line-height: rem(16);
+	color: #999999;
+}
+
+@include element($parent, 'tank') {
+	font-size: rem(14);
+	line-height: rem(16);
+	color: #999999;
+}
+
+	ul li { clear: both; }
+
+	ul li span:first-child {
+		float: left;
+		padding: 0.4em 0 0;
+		margin: 0;
+	}
+	ul li span + span {
+		float: right;
+		padding: 0 0 0.4em;
+		margin: 0;
+	}
+
+	ul li:after {
+		content: "";
+		display: block;
+		overflow: hidden;
+		height: 1em;
+		border-bottom: 1px dotted;
+	}
+
+	@include element($parent, 'price-wrp') {
+		clear: both;
+		display: flex;
+		margin-top: rem(32);
+	}
+
+	@include element($parent, 'price-text') {
+		font-weight: 600;
+		margin-right: rem(8);
+	}
+}

@@ -1,0 +1,177 @@
+$parent: slider;
+
+@include block($parent) {
+
+    @media (min-width: $tMin) {
+
+    }
+
+    @include element($parent, 'wrapper') {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    @include element($parent, 'items') {
+        display: flex;
+        transition: transform 0.7s ease;
+        height: 100%;
+    }
+
+    @include element($parent, 'item') {
+        flex: 0 0 100%;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    @include element($parent, 'image') {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    @include element($parent, 'content') {
+        padding: 0 rem(64);
+    }
+
+    @include element($parent, 'title') {
+        @media (min-width: $dMin) {
+            font-size: rem(32);
+            line-height: rem(37);
+            color: #FFFFFF;
+        }
+
+        @media (min-width: $d1280) {
+            font-size: rem(40);
+            line-height: rem(47);
+            color: #FFFFFF;
+        }
+    }
+
+    @include element($parent, 'text') {
+        @media (min-width: $dMin) {
+            font-size: 22px;
+            line-height: 100%;
+            color: #EEEEEE;
+            margin-top: rem(8);
+        }
+
+        @media (min-width: $d1280) {
+            font-size: 24px;
+            line-height: 90%;
+            color: #EEEEEE;
+        }
+    }
+
+    @include element($parent, 'btn') {
+        height: rem(48);
+        width: rem(164);
+        background: linear-gradient(90deg, #13493F 0%, #0C7B1B 100%);
+        border-radius: rem(4);
+        margin-top: rem(32);
+    }
+
+    @include element($parent, 'btn-text') {
+        font-size: rem(18);
+        line-height: rem(21);
+        color: #EEEEEE;
+    }
+
+    @include element($parent, 'indicators') {
+        position: absolute;
+        right: 0;
+        bottom: rem(32);
+        left: 0;
+        z-index: 15;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        margin-right: 15%;
+        margin-left: 15%;
+        list-style: none;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+  
+      .slider__indicators li {
+        box-sizing: content-box;
+        flex: 0 1 auto;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 3px;
+        margin-left: 3px;
+        text-indent: -999px;
+        cursor: pointer;
+        background-color: #EEEEEE;
+        background-clip: padding-box;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+      }
+  
+      .slider__indicators li.active {
+        background-color: #0EC261;;
+      }
+  
+      /* для стилизации текущего слайдера */
+      .img-fluid {
+        display: inline-block;
+        height: auto;
+        max-width: 100%;
+      }
+
+      .slider__control {
+        position: absolute;
+        top: 50%;
+        //-display: none;
+        align-items: center;
+        justify-content: center;
+        width: rem(64);
+        color: #fff;
+        text-align: center;
+        height: 100%;
+        transform: translateY(-50%);
+        fill: none;
+        display: flex;
+      }
+  
+      .slider__control_show {
+        display: flex;
+      }
+  
+      .slider__control:hover,
+      .slider__control:focus {
+        color: #fff;
+        text-decoration: none;
+        outline: 0;
+        opacity: 0.9;
+        background: #0EC261;
+        opacity: 0.2;
+      }
+  
+      .slider__control_prev {
+        left: 0;
+      }
+  
+      .slider__control_next {
+        right: 0;
+      }
+  
+      .slider__control::before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: transparent no-repeat center center;
+        background-size: 100% 100%;
+      }
+
+      .slider__arrow {
+        width: rem(8);
+        height: rem(18);
+      }
+}

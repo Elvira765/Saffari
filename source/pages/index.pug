@@ -1,22 +1,8 @@
 extends ../layouts/main.pug
-
-include ../blocks/about/about.pug
-include ../blocks/container/container.pug
-include ../blocks/features/features.pug
-include ../blocks/location/location.pug
-include ../blocks/service/service.pug
-include ../blocks/direction/direction.pug
-include ../blocks/award/award.pug
-include ../blocks/client/client.pug
+include ../blocks/carsharing/carsharing.pug
 
 block vars
 	- homepage = true;
 	- pageInfo = require('../data/indexPage.json');
 block content
-	+about(pageInfo.about)
-	+features(pageInfo.features)
-	+location(pageInfo.location)
-	+service(pageInfo.service)
-	+direction(pageInfo.direction)
-	+award(pageInfo.award)
-	+client(pageInfo.client)
+	+carsharing(pageInfo.carsharing)

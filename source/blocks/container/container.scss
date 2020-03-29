@@ -2,20 +2,21 @@ $parent: container;
 
 @include block($parent) {
 
-	max-width: rem(320);
-	margin: 0 auto; //выравниваине по центру
+	//max-width: rem(375);
+	//margin: 0 auto; //выравниваине по центру
 	
-	@media (min-width: $tMin) {
-		max-width: rem(768);
-		margin: 0 auto; //выравниваине по центру
-	}
+	//@media (min-width: $tMin) {
+		//max-width: rem(768);
+		//margin: 0 auto; //выравниваине по центру
+	//}
 	
-	@media (min-width: $dMin) {
-		max-width: rem(1024);
-		margin: 0 auto; //выравниваине по центру
-	}
+	//@media (min-width: $dMin) {
+		//max-width: rem(1024);
+		//margin: 0 auto; //выравниваине по центру
+	//}
+
 	@media (min-width: $d1280) {
-		max-width: rem(1440);
+		max-width: rem(2560);
 		margin: 0 auto; //выравниваине по центру
 	}
 }

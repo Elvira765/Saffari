@@ -1,0 +1,95 @@
+{
+    "order":{
+        "menu": {
+			"btn":"./svg/menu_btn.svg"
+        },
+        "header":{
+            "name": "Need for drive",
+            "icon": "./svg/location.svg",
+            "location": "Ульяновск"
+        },
+        "step":[
+            {
+                "name":"Местоположение",
+                "url": "/",
+                "active":"true"
+            },
+            {
+                "name":"Модель",
+                "url": "/"
+            },
+            {
+                "name":"Дополнительно",
+                "url": "/"
+            },
+            {
+                "name":"Итого",
+                "url": "/"
+            }
+        ],
+        "search":{
+            "map":{
+                "src":"source/static/assets/images/carsharing/map.png",
+                "alt":"map "
+            },
+            "car":[
+                {
+                    "name":"ELANTRA",
+                    "price":"12 000 - 25 000 ₽",
+                    "image":{
+                        "src":"source/static/assets/images/carsharing/catalog/image 1.png",
+                        "alt":"car"
+                    }
+                },
+                {
+                    "name":"i30 N",
+                    "price":"12 000 - 25 000 ₽",
+                    "image":{
+                        "src":"source/static/assets/images/carsharing/catalog/image 2.png",
+                        "alt":"car"
+                    }
+                },
+                {
+                    "name":"CRETA",
+                    "price":"12 000 - 25 000 ₽",
+                    "image":{
+                        "src":"source/static/assets/images/carsharing/catalog/image 3.png",
+                        "alt":"car"
+                    }
+                },
+                {
+                    "name":"SONATA",
+                    "price":"10 000 - 32 000 ₽",
+                    "image":{
+                        "src":"source/static/assets/images/carsharing/catalog/image 4.png",
+                        "alt":"car"
+                    }
+                }
+            ],
+            "order":{
+                "confirmation":"Ваш заказ подтверждён",
+                "model":"Hyndai, i30 N",
+                "number":"K 761 HA 73",
+                "tank":"<b>Топливо</b> 100%",
+                "date":"<b>Доступна с</b> 12.06.2019 12:00",
+                "image":{
+                    "src":"source/static/assets/images/carsharing/catalog/image 2.png",
+                    "alt":"car"
+                }
+            }
+        },
+        "conclusion":{
+            "title":"Ваш заказ:",
+            "location":"Ульяновск, Нариманова 42",
+            "model":"Hyndai, i30 N",
+            "color":"Голубой",
+            "time":"1д 2ч",
+            "tariff":"На сутки",
+            "tank":"Да",
+            "price":"16 000 ₽",
+            "button":{
+                "text":"Заказать"
+            }
+        }
+    }
+}

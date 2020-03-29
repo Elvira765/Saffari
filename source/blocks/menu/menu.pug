@@ -1,0 +1,12 @@
+mixin menu(data,className)
+	.menu(class=className)
+		.menu__burger
+			a.menu__burger-button(href="#")
+				span.menu__burger-lines
+			nav.menu__burger-nav
+				if data.items
+					each item in data.items
+						a.menu__burger-link(href=item.href)!= item.link
+			.menu__burger-overlay
+		button.menu__language-btn
+			.menu__language!= data.language

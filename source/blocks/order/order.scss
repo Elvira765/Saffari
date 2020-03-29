@@ -1,0 +1,28 @@
+$parent: order;
+
+@include block($parent) {
+    display: flex;
+    //-height: 100vh;
+
+
+    @include element($parent, 'main') {
+        width: 100%;
+    }
+
+    @include element($parent, 'header') {
+        padding: rem(32) rem(64);
+    }
+
+    @include element($parent, 'sections') {
+        display: flex;
+    }
+
+    @include element($parent, 'conclusion') {
+        min-width: rem(384);
+        border-left: 1px solid #EEEEEE;;
+    }
+
+    @include element($parent, 'menu') {
+        padding: rem(32) rem(8);
+    }
+}

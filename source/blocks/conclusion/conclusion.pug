@@ -1,0 +1,27 @@
+include ../core/button/button.pug
+
+mixin conclusion(data, className)
+    .conclusion(class=className)
+        .conclusion__title!=data.title
+        ul
+            .conclusion__items
+                li
+                    span.conclusion__item Пункт выдачи
+                    span.conclusion__location=data.location
+                li
+                    span.conclusion__item Модель
+                    span.conclusion__model=data.model
+                li
+                    span.conclusion__item Длительность аренды
+                    span.conclusion__time=data.time
+                li
+                    span.conclusion__item Тариф
+                    span.conclusion__tariff=data.tarif
+                li
+                    span.conclusion__item Полный бак
+                    span.conclusion__tank=data.tank
+        .conclusion__price-wrp
+            p.conclusion__price-text Цена:
+            .conclusion__price!= data.price
+        +button(data.button, 'conclusion__button')
+

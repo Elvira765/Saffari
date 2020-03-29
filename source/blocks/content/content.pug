@@ -1,0 +1,14 @@
+include ../header/header.pug
+
+mixin content(data, className)
+    .content(class=className)
+        +header(data.header, 'content__header')
+        .content__main
+            .content__title!= data.title
+            .content__subtitle!= data.subtitle
+            .content__text!= data.text
+            button.content__btn
+                span.content__btn-text!=data.btn.text
+        .content__footer
+            .content__number!= data.number
+            .content__copyright!= data.copyright

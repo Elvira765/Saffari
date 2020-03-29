@@ -1,0 +1,48 @@
+$parent: carsharing;
+
+@include block($parent) {
+    @media (min-width: $tMin) {
+        display: flex;
+        height: 100vh;
+    }
+
+    @include element($parent, 'menu') {
+        position: absolute;
+        top: rem(16);
+        left: rem(16);
+        stroke:#121212;
+
+        @media (min-width: $tMin) {
+            position: relative;
+            top: 0;
+            left: 0;
+            padding: rem(32) rem(8);
+            stroke: #ffffff;
+        }
+    }
+
+    @include element($parent, 'content') {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    @include element($parent, 'slider') {
+        display: none;
+        
+        @media (min-width: $dMin) {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            min-width: rem(410);
+            margin-left: auto;
+            margin-right: auto;
+            width: calc(100% - 410px);
+        }
+
+        @media (min-width: $d1280) {
+            
+        }
+    }
+}

@@ -1,0 +1,17 @@
+include ../container/container.pug
+include ../menu/menu.pug
+include ../header/header.pug
+include ../step/step.pug
+include ../search/search.pug
+include ../conclusion/conclusion.pug
+
+mixin order(data,className)
+	+container
+		.order(class=className)
+			+menu(data.menu, 'order__menu')
+			.order__main
+				+header(data.header, 'order__header')
+				+step(data.step, 'order__step')
+				.order__sections
+					+search(data.search, 'order__search')
+					+conclusion(data.conclusion, 'order__conclusion')

@@ -1,0 +1,31 @@
+$parent:step;
+
+@include block($parent) {
+    display: flex;
+    border-bottom: 1px solid #EEEEEE;
+    border-top: 1px solid #EEEEEE;
+    padding: rem(8) rem(64);
+
+    @include element($parent, 'wrapper') {
+        display: flex;
+        align-items: center;
+    }
+
+    @include element($parent, 'pointer') {
+        width: rem(6);
+        height: rem(8);
+        margin-right: rem(16);
+    }
+
+    @include element($parent, 'name') {
+        font-size: rem(14);
+        line-height: rem(16);
+        font-weight: 600;
+        margin-right: rem(16);
+        color: #999999;
+
+        @include modifier($parent, 'active') {
+            color: #0EC261;
+        }
+    }
+}

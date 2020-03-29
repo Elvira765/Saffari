@@ -1,4 +1,5 @@
-mixin list(arr, className)
+mixin list(data, className)
 	ul.list(class=className)
-		each item in arr
-			li!= item
+		each el in data
+			li!= el.item
+				//-a(href!= el.href)

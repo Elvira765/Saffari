@@ -1,0 +1,8 @@
+extends ../layouts/main.pug
+include ../blocks/order/order.pug
+
+block vars
+	- homepage = true;
+	- pageInfo = require('../data/orderPage.json');
+block content
+	+order(pageInfo.order)

@@ -1,0 +1,7 @@
+mixin step(data,className)
+    .step(class=className)
+        each item in data
+            .step__wrapper
+                a.step__name(class=(item.active ? 'step__name--active' : ''))!= item.name
+                svg.step__pointer
+                    use(xlink:href=loadAssets('./svg/Pointer.svg'))
